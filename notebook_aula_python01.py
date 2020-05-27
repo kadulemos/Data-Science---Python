@@ -260,3 +260,29 @@ lista2.sort()
 
 lista2
 
+"""<h2> Lista Aninhadas </h2>"""
+
+# Lista que contém 3 listas
+listas = [['cat', 'dog', 'snake'], ['Audi', 'Ferrari', 'Porshe'], [10, 100, 200]]
+
+# Imprimindo o primeiro elemento (lista de animais)
+listas [0]
+
+# Imprimindo o segundo elemento (lista de carros)
+listas [1]
+
+# Imprimindo o terceiro elemento (lista de inteiros)
+listas [2]
+
+# Imprimindo o primeiro carro da lista de carros
+listas [1] [0]
+
+# Imprimindo o segundo carro da lista de carros
+listas [1] [1]
+
+# Imprimindo o último valor da lista de números
+listas [2] [2]
+
+# Operação de repetição de elementos de linhas aninhadas
+listas [0] * 3
+
