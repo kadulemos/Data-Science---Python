@@ -169,3 +169,94 @@ frase.islower()
 
 # Quebrando a string em uma lista de termos
 frase.split()
+
+"""<h2> Trabalhando com Listas </h2>"""
+
+# Sitanxe para criar listas no Python
+bixos = [1,2,3]
+bixos
+
+# Listas com tipos de dados diferentes
+bixos = ['dog', 'cat', 122344545, 13.9, [0,0,1]]
+
+bixos
+
+# Índices de elementos
+
+bixos[0]
+
+bixos [3]
+
+# Atualizando o valor 1 da Lista
+
+bixos[0] = 'Horse'
+
+bixos
+
+# Slicing em Listas
+
+bixos[1:]
+
+# Removendo elementos
+bixos.remove('cat')
+
+bixos
+
+"""<h2> Operações em Listas </h2>"""
+
+len (bixos)
+
+# Concatenando Listas
+
+bixos + [200,'Minerando', 'Dados']
+
+# Check elementos
+
+'cat' in bixos
+
+# Valor máximo da Lista
+
+lista = [1,500,23,90,56788]
+
+max(lista)
+
+# Valor mínimo da Lista
+
+min(lista)
+
+# Multiplicação de Elementos
+
+['Olá'] * 3
+
+"""<h2> Métodos em Listas </h2>"""
+
+# É possível visualizar os métodos existentes do objeto lista (digite o nome do objeto + . + tab)
+bixos.append('snake')
+
+bixos
+
+# Extend a lista com mais de um elemento.
+bixos.extend(['lion',10.5])
+
+bixos
+
+bixos.index('snake')
+
+bixos.remove('snake')
+
+bixos.count('snake')
+
+bixos
+
+# Ordenação de lista de inteiros
+lista =[1,500,23,90,56788]
+lista2 = ['casa', 'rio', 'lua', 'agua']
+
+lista.sort()
+
+lista
+
+lista2.sort()
+
+lista2
+
