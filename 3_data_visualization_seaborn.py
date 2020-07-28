@@ -214,6 +214,70 @@ sns.catplot(x='day', y='total_bill', hue='sex', split=True, inner='stick', palet
 sns.catplot(x='day', y='total_bill', hue='sex', split=True, palette='pastel', kind='violin', data=tips)
 sns.swarmplot(x='day', y='total_bill', color='k', size=3, data=tips)
 
+# %% [markdown]
+# <h2>Visualizando a distribuição de um Dataset</h2>
+# %% [markdown]
+# **Histograma**
+# 
+# * O método histograma tenta encontrar a melhor quantidade de bins.
+
+# %%
+sns.set(color_codes=True)
+
+
+# %%
+sns.distplot(tips.total_bill, kde=False)
+
+# %% [markdown]
+# **Plotando um histograma para uma distribuição normal**
+# 
+# * Importa o Numpy para geração aleatória de dados
+
+# %%
+import numpy as np
+
+# %% [markdown]
+# * Gera 100 valores aleatórios em uma distribuição normal
+
+# %%
+x = np.random.normal(size=100)
+
+# %% [markdown]
+# * Mostra Dados aleatórios na variável **x**
+
+# %%
+x
+
+# %% [markdown]
+# * Plota o histograma para a variável **x**
+
+# %%
+sns.distplot(x)
+
+# %% [markdown]
+# * Plota o Histograma com bins=20 e KDE = True
+
+# %%
+sns.distplot(tips.total_bill, bins=20, kde=True)
+
+# %% [markdown]
+# Visualizando apenas o KDE
+
+# %%
+sns.distplot(tips.total_bill, hist=False)
+
+# %% [markdown]
+# Parâmetro RUG
+
+# %%
+sns.distplot(tips.total_bill, hist=False, rug=True)
+
+# %% [markdown]
+# <h2> Jointplot (ScatterPlot e Histograma) </h2>
+# 
+# * Quando queremos ver a distribuição de duas variáveis podemos usar o Jointplot;
+# * União de gráficos do tipo Plot e Histogramas para as duas variáveis;
+# * Mostra o ScatterPlot para as duas variáveis e um Histograma para cada variável separadamente.
 
 # %%
 
