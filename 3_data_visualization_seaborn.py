@@ -280,6 +280,69 @@ sns.distplot(tips.total_bill, hist=False, rug=True)
 # * Mostra o ScatterPlot para as duas variáveis e um Histograma para cada variável separadamente.
 
 # %%
+sns.jointplot(x='tip', y='total_bill', color='r', data=tips)
+
+# %% [markdown]
+# <h2> Hexbin Plots </h2>
+# 
+# * Adequado para visualização de grande conjunto de dados;
+# * Tende a funcionar melhor com as cores em branco de fundo.
+
+# %%
+sns.jointplot(x='tip', y='total_bill', color='b', kind='hex', data=tips)
+
+# %% [markdown]
+# **Usando o KDE para mais de uma variável**
+
+# %%
+sns.jointplot(x='tip', y='total_bill', color='b', kind='kde', data=tips)
+
+# %% [markdown]
+# <h2>Visualizando relacionamentos emparelhados</h2>
+# 
+# * Plot multiplas variáveis de um dataset;
+# * Cria uma matriz de eixos de mostrar a relação de cada par de colunas no dataframe;
+# * Por padrão plota também um histograma de cada coluna no dataframe na diagonal da matriz;
+
+# %%
+sns.pairplot(tips)
+
+# %% [markdown]
+# **Carrega o dataset iris**
+
+# %%
+iris = sns.load_dataset('iris')
+
+
+# %%
+iris.head()
+
+# %% [markdown]
+# **Plot pares emparelhando segregando pela coluna species**
+
+# %%
+sns.pairplot(iris, hue='species', palette='Set1')
+
+# %% [markdown]
+# **Plotando Scatter plots com regressão**
+
+# %%
+sns.pairplot(iris, kind='reg')
+
+# %% [markdown]
+# **Plotando histograma na diagonal**
+
+# %%
+sns.pairplot(iris, hue='species', diag_kind='hist')
+
+# %% [markdown]
+# **Plotando apenas duas colunas do dataframe**
+
+# %%
+sns.pairplot(iris, hue='species', vars=['sepal_width', 'sepal_length'], palette='Set1')
+
+
+# %%
 
 
 
