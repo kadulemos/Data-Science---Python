@@ -341,6 +341,35 @@ sns.pairplot(iris, hue='species', diag_kind='hist')
 # %%
 sns.pairplot(iris, hue='species', vars=['sepal_width', 'sepal_length'], palette='Set1')
 
+# %% [markdown]
+# <h2>Gráficos de Correlação</h2>
+# 
+# * Útil para visualizar se existem correlações positivas entre colunas;
+# * Método corr() do pandas possibilita calcular correlações por tipo *spearman* ou *pearson*;
+
+# %%
+correlacoes = tips.corr()
+
+
+# %%
+ax = sns.heatmap(correlacoes)
+
+# %% [markdown]
+# **Exibe os valores de correlação**
+
+# %%
+ax = sns.heatmap(correlacoes, annot=True)
+
+# %% [markdown]
+# **Visualizando a correlação de colunas do Dataframe Iris**
+
+# %%
+correlacoes = iris.corr()
+
+
+# %%
+ax = sns.heatmap(correlacoes, cmap= 'PuOr', annot= True)
+
 
 # %%
 
