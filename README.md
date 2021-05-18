@@ -1,2 +1,2 @@
 # Data-Science---Python
-Content with study codes in Python.
+Python study code content.
